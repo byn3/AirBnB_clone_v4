@@ -211,8 +211,8 @@ Uses [Travis-CI](https://travis-ci.org/) to run all tests on all commits to the
 github repo
 
 ## Authors
-* Cameron Eng [Cameron Eng ](github.com/c-eng) | [Email](388@holbertonschool.com) | [@c33Eng](https://twitter.com/c33Eng)
-* Bryan Leung [Bryan Leung](github.come/byn3) | [Email](369@holbertonschool.com) | [@bynleung](https://twitter.com/bynleung)
+* Cameron Eng [Github](github.com/c-eng) | [Email](388@holbertonschool.com) | [Twitter- @c33Eng](https://twitter.com/c33Eng)
+* Bryan Leung [Github](github.come/byn3) | [Email](369@holbertonschool.com) | [Twitter- @bynleung](https://twitter.com/bynleung)
 * MJ Johnson, [@mj31508](https://github.com/mj31508)
 * David John Coleman II, [davidjohncoleman.com](http://www.davidjohncoleman.com/) | [@djohncoleman](https://twitter.com/djohncoleman)
 * Kimberly Wong, [kjowong](https://github.com/kjowong) | [@kjowong](https://twitter.com/kjowong) | [kjowong@gmail.com](kjowong@gmail.com)

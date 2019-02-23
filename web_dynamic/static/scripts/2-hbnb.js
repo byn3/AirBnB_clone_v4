@@ -13,12 +13,37 @@ $(document).ready(function () {
   $('.amenities h4').text(Object.values(dict));
   });
 
+let url = 'http://0.0.0.0:5001/api/v1/status/';
+$.get(url, function (data) {
+    if (data.status === 'success') {
+	  $('#api_status').css('background-color:red');
+      $('#api_status').addClass('available');
+}});
+
 });
 
-$(document).ready(function () {
-  $.get('http://0.0.0.0:5001/api/v1/status/').done(function (data) {
-    if (data.status == "OK") {
-      $('#api_status').addClass('available');
-	    }
-  });
+/*
+$.ajax({
+    type: "GET",
+    url: 'https://0.0.0.0:5001/api/v1/status/',
+    data: {},
+    success: console.log("poop")
 });
+*/
+/*
+$.ajax({
+    url: "https://0.0.0.0:5001/api/v1/status/",
+    data: {},
+    error: function(xhr, statusText, errorThrown){$('#api_status').addClass('.available');}
+});
+*/
+/*
+console.log("1");
+  $.ajax('https://0.0.0.0:5001/api/v1/status/').then(function (data) {
+  console.log("2");
+    if (data.status === "OK") {
+	console.log('IT WORKS');
+      $('#api_status').addClass('.available');
+	    }
+
+}); */

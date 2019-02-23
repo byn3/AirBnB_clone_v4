@@ -27,8 +27,7 @@ cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 # app_views BluePrint defined in api.v1.views
 app.register_blueprint(app_views)
-
-
+app.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
 # begin flask page rendering
 @app.teardown_appcontext
 def teardown_db(exception):

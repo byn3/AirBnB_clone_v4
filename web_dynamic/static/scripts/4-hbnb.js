@@ -27,7 +27,6 @@ $(document).ready(function () {
     success: function (data) {
 //	$('.place').empty();
 	for (let i = 0; i < data.length; i++) {
-	  console.log(data[i]);
 	  let place = data[i];
 	  $('.places').append('<article><div class="title"><h2>'
 	  + place.name + '</h2><div class="price_by_night">'
@@ -47,21 +46,26 @@ $(document).ready(function () {
 	}
   });
   $('button').click(function () {
-    let alist = [];
+  $('SECTION.places article').remove();
+/*
+  let alist = [];
     for (let j = 0; j < dict.length; j++)
     {
       alist.append(dict[j]);
     }
+
+	console.log(alist);
+*/
       $.ajax({ url : url2,
         type : 'POST',
         contentType : 'application/json',
-        data : JSON.stringify({"amenities" : alist}),
+        data : JSON.stringify({"amenities" : Object.keys(dict)}),
         success: function (data) {
 //          $('.places').empty();
           for (let i = 0; i < data.length; i++) {
-            console.log(data[i]);
             let place = data[i];
-            $('.place').append('<article><div class="title"><h2>'
+            console.log(data[i]);
+            $('.places').append('<article><div class="title"><h2>'
             + place.name + '</h2><div class="price_by_night">'
             + place.price_by_night
             + '</div></div><div class="information"><div class="max_guest">'
@@ -76,6 +80,9 @@ $(document).ready(function () {
             + place.description + '</div></article>'
           );
         }
+		if (data.length === 0) {
+		$('.places').append('<article>2 SPECIFIC. NO RESULTS</article>');
+		}
         }
     });
   });

@@ -1,5 +1,5 @@
+let dict = {};
 $(document).ready(function () {
-  let dict = {};
   $("input[type=checkbox]").click(function () {
   console.log(this);
     if (this.checked) {
@@ -26,9 +26,8 @@ $(document).ready(function () {
     data : JSON.stringify({}),
     success: function (data) {
 	for (let i = 0; i < data.length; i++) {
-	  console.log(data[i]);
 	  let place = data[i];
-	  $('.place').append('<article><div class="title"><h2>'
+	  $('SECTION.places').append('<article><div class="title"><h2>'
 	  + place.name + '</h2><div class="price_by_night">'
 	  + place.price_by_night
 	  + '</div></div><div class="information"><div class="max_guest">'
@@ -40,7 +39,6 @@ $(document).ready(function () {
 	  + place.number_bathrooms + 'Bathroom </div></div>'
 	  + '<div class="user"></div>'
 	  + '<div class="description">'
-	  + 
 	  + place.description + '</div></article>'
 	  );
 	}

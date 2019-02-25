@@ -12,15 +12,20 @@ $(document).ready(function () {
     }
   $('.amenities h4').text(Object.values(dict));
   });
-
 let url = 'http://0.0.0.0:5001/api/v1/status/';
 $.get(url, function (data) {
-    if (data.status === 'OK') {
+    if (data['status'] === 'OK') {
+      console.log('changed it');
       $('#api_status').addClass('available');
-}});
-
+//      $('#api_status').css('background-color:red');
+    }
+	else {
+	      $('#api_status').removeClass('available');
+		  
+	}
 });
 
+});
 /*
 $.ajax({
     type: "GET",

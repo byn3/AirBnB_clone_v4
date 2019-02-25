@@ -14,6 +14,8 @@ header {
 }
 
 
+
+
 #api_status {
     float: right;
 	height: 40px;
@@ -24,7 +26,6 @@ header {
 	border-radius: 50%;
 }
 
-
 #api_status.available {
-        background-color: #ff545f;
+        background-color: #ff545f !important;
 }
